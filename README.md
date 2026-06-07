@@ -9,21 +9,21 @@ A CATfeine é um café fictício criado como trabalho acadêmico de introdução
 
 Estrutura de arquivos
 CATFEINE/
-├── index.html
-├── produtos.html
-├── contato.html
-├── sobre.html
-├── style.css
-├── styles/
-│   ├── contato.css
-│   ├── produtos.css
-│   └── sobre.css
-├── img/
-│   └── (imagens do projeto)
-├── facebook_fake.html
-├── instagram_fake.html
-├── twitter_fake.html
-└── whatsapp_fake.html
+  index.html
+  produtos.html
+  contato.html
+  sobre.html
+  style.css
+  styles/
+    contato.css
+    produtos.css
+    sobre.css
+  img/
+    (imagens do projeto)
+  facebook_fake.html
+  instagram_fake.html
+  twitter_fake.html
+  whatsapp_fake.html
 
 Tecnologias utilizadas
 HTML5 — estrutura semântica das páginas
