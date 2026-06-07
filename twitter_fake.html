@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATfeine - Twitter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000;
+            color: #e7e9ea;
+        }
+        
+        .header {
+            background: #000;
+            border-bottom: 1px solid #2f3336;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo {
+            font-size: 30px;
+            color: #1d9bf0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+        
+        .profile {
+            border-bottom: 1px solid #2f3336;
+            padding: 16px;
+        }
+        
+        .profile-header {
+            position: relative;
+            margin-bottom: 16px;
+        }
+        
+        .cover-photo {
+            height: 150px;
+            background: linear-gradient(45deg, #8b5a3c, #d4a574);
+            border-radius: 16px;
+            margin-bottom: -40px;
+        }
+        
+        .profile-info {
+            padding: 0 16px;
+        }
+        
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #1d9bf0;
+            border: 4px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+        
+        .profile-name {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        
+        .profile-handle {
+            color: #71767b;
+            margin-bottom: 12px;
+        }
+        
+        .profile-bio {
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .profile-meta {
+            display: flex;
+            gap: 16px;
+            color: #71767b;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        
+        .profile-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+        
+        .stat {
+            color: #71767b;
+        }
+        
+        .stat-number {
+            color: #e7e9ea;
+            font-weight: 700;
+        }
+        
+        .tweet {
+            border-bottom: 1px solid #2f3336;
+            padding: 16px;
+            transition: background-color 0.2s;
+        }
+        
+        .tweet:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+        
+        .tweet-header {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .tweet-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #1d9bf0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        
+        .tweet-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .tweet-name {
+            font-weight: 700;
+            font-size: 15px;
+        }
+        
+        .tweet-handle {
+            color: #71767b;
+            font-size: 15px;
+        }
+        
+        .tweet-time {
+            color: #71767b;
+            font-size: 15px;
+        }
+        
+        .tweet-content {
+            font-size: 15px;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            margin-left: 52px;
+        }
+        
+        .tweet-actions {
+            display: flex;
+            justify-content: space-between;
+            max-width: 425px;
+            margin-left: 52px;
+        }
+        
+        .action-btn {
+            background: none;
+            border: none;
+            color: #71767b;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 13px;
+        }
+        
+        .action-btn:hover {
+            background-color: rgba(29, 155, 240, 0.1);
+            color: #1d9bf0;
+        }
+        
+        .hashtag {
+            color: #1d9bf0;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #1d9bf0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        .back-btn:hover {
+            background: #1a8cd8;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.history.back()">← Voltar</button>
+    
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">𝕏</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="profile">
+            <div class="profile-header">
+                
+            </div>
+            <div class="profile-info">
+                <div class="profile-pic">🐱</div>
+                <h1 class="profile-name">CATfeine</h1>
+                <div class="profile-handle">@catfeine_oficial</div>
+                <div class="profile-bio">
+                    ☕ Café & Gatos • O lugar perfeito para relaxar com seu felino favorito 🐾<br>
+                    📍 São Paulo, SP
+                </div>
+                <div class="profile-meta">
+                    <span>📅 Ingressou em março de 2024</span>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-number">1.524</span> Seguindo
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3.2K</span> Seguidores
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-avatar">🐱</div>
+                <div class="tweet-info">
+                    <span class="tweet-name">CATfeine</span>
+                    <span class="tweet-handle">@catfeine_oficial</span>
+                    <span class="tweet-time">• 2h</span>
+                </div>
+            </div>
+            <div class="tweet-content">
+                Que tal um cafezinho especial acompanhado da companhia dos nossos gatinhos? ☕🐾 Venha conhecer nosso espaço aconchegante! <span class="hashtag">#CATfeine</span> <span class="hashtag">#CafeComGatos</span> <span class="hashtag">#SaoPaulo</span>
+            </div>
+            <div class="tweet-actions">
+                <button class="action-btn">💬 12</button>
+                <button class="action-btn">🔄 8</button>
+                <button class="action-btn">❤️ 47</button>
+                <button class="action-btn">📤</button>
+            </div>
+        </div>
+        
+        <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-avatar">🐱</div>
+                <div class="tweet-info">
+                    <span class="tweet-name">CATfeine</span>
+                    <span class="tweet-handle">@catfeine_oficial</span>
+                    <span class="tweet-time">• 1d</span>
+                </div>
+            </div>
+            <div class="tweet-content">
+                Nossos gatinhos estão esperando por você! Cada um tem sua personalidade única. Venha conhecê-los! 🐈‍⬛🐈 <span class="hashtag">#GatosDoCafe</span> <span class="hashtag">#Adocao</span>
+            </div>
+            <div class="tweet-actions">
+                <button class="action-btn">💬 23</button>
+                <button class="action-btn">🔄 15</button>
+                <button class="action-btn">❤️ 89</button>
+                <button class="action-btn">📤</button>
+            </div>
+        </div>
+        
+        <div class="tweet">
+            <div class="tweet-header">
+                <div class="tweet-avatar">🐱</div>
+                <div class="tweet-info">
+                    <span class="tweet-name">CATfeine</span>
+                    <span class="tweet-handle">@catfeine_oficial</span>
+                    <span class="tweet-time">• 2d</span>
+                </div>
+            </div>
+            <div class="tweet-content">
+                Café especial do dia: Cappuccino Gatinho! ☕ Feito com muito amor e uma pitada de fofura 🐱 <span class="hashtag">#CappuccinoGatinho</span> <span class="hashtag">#CafeEspecial</span>
+            </div>
+            <div class="tweet-actions">
+                <button class="action-btn">💬 5</button>
+                <button class="action-btn">🔄 3</button>
+                <button class="action-btn">❤️ 34</button>
+                <button class="action-btn">📤</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

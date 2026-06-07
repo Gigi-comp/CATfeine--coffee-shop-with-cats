@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATfeine - Instagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            color: #262626;
+        }
+        
+        .header {
+            background: white;
+            border-bottom: 1px solid #dbdbdb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 935px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo {
+            font-family: 'Billabong', cursive;
+            font-size: 32px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .container {
+            max-width: 614px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .profile {
+            background: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f09433, #bc1888);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            flex-shrink: 0;
+        }
+        
+        .profile-info h1 {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        
+        .profile-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-number {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .stat-label {
+            color: #8e8e8e;
+            font-size: 14px;
+        }
+        
+        .profile-bio {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .post {
+            background: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            margin-bottom: 24px;
+        }
+        
+        .post-header {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .post-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f09433, #bc1888);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .post-username {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .post-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, #d4a574, #8b5a3c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .post-actions {
+            padding: 16px;
+            border-bottom: 1px solid #efefef;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .action-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 8px;
+        }
+        
+        .likes {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .caption {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .username {
+            font-weight: 600;
+            margin-right: 4px;
+        }
+        
+        .post-time {
+            color: #8e8e8e;
+            font-size: 12px;
+            margin-top: 8px;
+            text-transform: uppercase;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #f09433, #bc1888);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .back-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.history.back()">← Voltar</button>
+    
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">Instagram</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="profile">
+            <div class="profile-header">
+                <div class="profile-pic">🐱</div>
+                <div class="profile-info">
+                    <h1>catfeine_oficial</h1>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <div class="stat-number">47</div>
+                            <div class="stat-label">publicações</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">3.2k</div>
+                            <div class="stat-label">seguidores</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">892</div>
+                            <div class="stat-label">seguindo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-bio">
+                <strong>CATfeine ☕🐾</strong><br>
+                Café • Gatos • Amor<br>
+                📍 Rua dos Felinos, 123 - São Paulo<br>
+                ☎️ (11) 9876-5432<br>
+                🕒 Seg-Dom: 8h às 20h
+            </div>
+        </div>
+        
+        <div class="post">
+            <div class="post-header">
+                <div class="post-avatar">🐱</div>
+                <div class="post-username">catfeine_oficial</div>
+            </div>
+            <div class="post-image">
+                🐱 ☕ Momento CATfeine
+            </div>
+            <div class="post-actions">
+                <div class="action-buttons">
+                    <button class="action-btn">❤️</button>
+                    <button class="action-btn">💬</button>
+                    <button class="action-btn">📤</button>
+                </div>
+                <div class="likes">127 curtidas</div>
+                <div class="caption">
+                    <span class="username">catfeine_oficial</span>
+                    Olha só que fofura! Nosso gatinho Bolinho fazendo sucesso com os visitantes hoje ☕🐾 Quem mais quer conhecer nossos peludinhos? #catfeine #gatos #cafe #fofura
+                </div>
+                <div class="post-time">HÁ 3 HORAS</div>
+            </div>
+        </div>
+        
+        <div class="post">
+            <div class="post-header">
+                <div class="post-avatar">🐱</div>
+                <div class="post-username">catfeine_oficial</div>
+            </div>
+            <div class="post-image">
+                ☕ Café Especial do Dia
+            </div>
+            <div class="post-actions">
+                <div class="action-buttons">
+                    <button class="action-btn">❤️</button>
+                    <button class="action-btn">💬</button>
+                    <button class="action-btn">📤</button>
+                </div>
+                <div class="likes">89 curtidas</div>
+                <div class="caption">
+                    <span class="username">catfeine_oficial</span>
+                    Café especial do dia: Cappuccino Gatinho! Feito com muito amor e uma pitada de fofura 🐱☕ #coffee #specialcoffee #catfeine
+                </div>
+                <div class="post-time">HÁ 1 DIA</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
